@@ -23,7 +23,7 @@ header h1 {
 .navigation-bar {
   font-family: "Noto Sans KR", sans-serif;
   background-color: rgb(104, 38, 124, 5%);
-  padding: 20px 180px;
+  padding: 20px 120px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

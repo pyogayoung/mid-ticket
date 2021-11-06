@@ -25,7 +25,7 @@ header h1 {
   background-color: rgb(104, 38, 124, 5%);
   padding: 20px 120px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   text-align: center;
 }

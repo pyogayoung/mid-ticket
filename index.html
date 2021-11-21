@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
     <title>미드티켓</title>
 </head>
-<body>
+<body onload="popup();">
     <header>
         <h1>mid-Ticket</h1>
     </header>
@@ -26,7 +26,7 @@
                 </ul>
             </li>
             <li>
-                <a href="">클래식/무용</a> 
+                <a href="./sub02/classic.html">클래식/무용</a> 
                 <ul id="classic"> <hr>
                     <li><a href="">클래식</a></li>
                     <li><a href="">오페라</a></li>
@@ -72,21 +72,25 @@
                 <h2>예매율 best</h2>
                 <div class="best-img">
                     <div class="best-img-shear">
-                        <a href=""><img src="images/shear.jpg" alt=""></a>             
+                        <a href=""><img src="images/shear.jpg" alt=""
+                            onmouseenter="zoomIn(event)"
+                            onmouseleave="zoomOut(event)"></a>             
                         <p>ShearMadness</p>
                         <span>사건이 벌어진 바로 그 날!</span>
-
                     </div>
                     <div class="best-img-iu">
-                        <a href=""><img src="images/iu.jpeg" alt=""></a>
+                        <a href=""><img src="images/iu.jpeg" alt=""
+                            onmouseenter="zoomIn(event)"
+                            onmouseleave="zoomOut(event)"></a>
                         <p>Love Poem</p>  
                         <span>아이유 전국투어 콘서트</span>
                     </div>
                     <div class="best-img-nodeul">
-                        <a href=""><img src="images/노들.jpg" alt=""></a><!--사진을 클릭하면 상품페이지로 이동하도록-->             
+                        <a href=""><img src="images/노들.jpg" alt=""
+                            onmouseenter="zoomIn(event)"
+                            onmouseleave="zoomOut(event)"></a><!--사진을 클릭하면 상품페이지로 이동하도록-->             
                         <p>The wonder week</p>  
                         <span>노들섬 2주년 기획공연</span>
-                        
                     </div>                    
                 </div>
             </div>
@@ -94,17 +98,23 @@
                 <h2>새로운 공연</h2>
                 <div class="new-img">
                     <div class="beyond">
-                        <a href=""><img src="images/beyond.gif" alt=""></a>
+                        <a href=""><img src="images/beyond.gif" alt=""
+                            onmouseenter="zoomIn(event)"
+                            onmouseleave="zoomOut(event)"></a>
                         <p>BEYOND THE ROAD</p>
                         <span>360도 감성 체험, 아시아 최초 전시</span>
                     </div>
                     <div class="hedwig">
-                        <a href=""><img src="images/hedwig.gif" alt=""></a>
+                        <a href=""><img src="images/hedwig.gif" alt=""
+                            onmouseenter="zoomIn(event)"
+                            onmouseleave="zoomOut(event)"ZX></a>
                         <p>HEDWIG</p>
                         <span>스타일리쉬 록 뮤지컬</span>
                     </div>
                     <div class="alice">
-                        <a href=""><img src="images/alice.gif" alt=""></a><!--사진을 클릭하면 상품페이지로 이동하도록-->
+                        <a href=""><img src="images/alice.gif" alt=""
+                            onmouseenter="zoomIn(event)"
+                            onmouseleave="zoomOut(event)"></a><!--사진을 클릭하면 상품페이지로 이동하도록-->
                         <p>Alice Dalton Brown</p>
                         <span>빛이 머무는 자리</span>
                     </div>
@@ -176,7 +186,6 @@
                             </tr>
                         </table>
                     </div>
-
                 </div>
             </div>
         </article>

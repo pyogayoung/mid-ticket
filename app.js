@@ -44,12 +44,10 @@ function entry(){
     }
 }
 
-
-
 let data = [["./sub01_images/1.jpg","정밀아 정기단독공연 〈춥지 않은 겨울밤〉","2022-01-01 ~ 2022-01-01", "세종문화회관"],
             ["./sub01_images/2.jpg","초승（CHOSNG）소극장 단독공연 ‘아파하는 꽃들에게’","2021-12-01 ~ 2022-01-01 ", "경희대 평화의 전당"],
-            ["./sub01_images/3.JPG","2021 김수영 단독공연［EPISODE］","2021-12-31 ~ 2022-01-01", "올림픽 체조경기장"],
-            ["./sub01_images/4.JPG","임헌일 단독공연 SUNSET","2022-01-11 ~ 2022-01-01", "잠실 주경기장"]]
+            ["./sub01_images/3.jpg","2021 김수영 단독공연［EPISODE］","2021-12-31 ~ 2022-01-01", "올림픽 체조경기장"],
+            ["./sub01_images/4.jpg","임헌일 단독공연 SUNSET","2022-01-11 ~ 2022-01-01", "잠실 주경기장"]]
 
 function tableprint(){
 let text ='';
@@ -61,6 +59,17 @@ text+=`</table>`;
     document.getElementById("productList").innerHTML=text;
 }
 
+function zoomIn(e) {
+    e.target.style.transform = "scale(1.1)";
+    e.target.style.zIndex = 1;
+    e.target.style.transition = "all 0.4s";
+  }
+
+  function zoomOut(e) {
+    e.target.style.transform = "scale(1)";
+    e.target.style.zIndex = 0;
+    e.target.style.transition = "all 0.4s";
+  }
 
 function fileUpload(){
     let a = new Array();
@@ -76,3 +85,7 @@ function fileUpload(){
     console.log(data);
 }
 
+function popup(){
+    //window.open("팝업소스파일", "팝업별명","스타일설정")
+    window.open("event.html", "event_popup", "width=500, height=500, scrollbars=yes, left=100, top=100");
+}  

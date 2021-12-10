@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sub01_style.css">
+    <link rel="stylesheet" href="./register.css">
+    <script src="main.js"></script>
     <script src="../app.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
-    <title>미드티켓</title>
 </head>
-<body onload="tableprint();">
+
+<body>
     <header>
-        <h1><a href="../index.html">mid-Ticket</a></h1>
+        <h1><a href="../index.html">mid-Ticket</a> </h1>
     </header>
     <nav>
         <ul class="navigation-bar">
             <button id="sidebar-button" onclick="w3_open()">☰</button> 
             <button id="sidebar-close-button" onclick="w3_close()">☰</button>            
             <li>
-                <a href="./concert.html">콘서트</a> 
+                <a href="../sub01/concert.html">콘서트</a> 
                 <ul id="concert"> <hr>
                     <li><a href="">아이돌</a></li>
                     <li><a href="">패스티벌</a></li>
@@ -26,7 +24,7 @@
                 </ul>
             </li>
             <li>
-                <a href="../sub02/classic.html">클래식/무용</a> 
+                <a href="./sub02/classic.html">클래식/무용</a> 
                 <ul id="classic"> <hr>
                     <li><a href="">클래식</a></li>
                     <li><a href="">오페라</a></li>
@@ -66,35 +64,38 @@
             </li>
         </ul>
     </nav>
-    <section >
-        <div id="demo">
-            <h2> 콘서트 </h2>
-            <div class="s-nav">
-                <ul>
-                    <li><a href="">전체</a></li>
-                    <li><a href="">아이돌</a></li>
-                    <li><a href="">페스티벌</a></li>
-                    <li><a href="">내한공연</a></li>
-                </ul>
+    <div id="page-wrap">
+        <form method="post" action="#" name="form" onsubmit="return checkAll();">
+            <fieldset>
+                <legend>회원정보입력</legend>
+                <div class="j">
+                    <label for="userId">아이디</label>
+                    <button>중복검사</button>
+                </div>
+                <input type="text" name="userId" id="text1" /><br />
+                <label for="password1">패스워드</label>
+                <input type="password" name="password1" /><br />
+                <label for="password2">패스워드 확인</label>
+                <input type="password" name="password2" /><br />
+                <label for="name">이름</label>
+                <input type="text" name="name" /><br />
+                <label for="tel">휴대폰 번호</label>
+                <input type="tel" name="tel" />
+                <br />
+                <label for="email">이메일</label>
+                <input type="email" name="email" />
+                <br />
+                <label for="dob">생일</label>
+                <input type="date" name="dob" />
+                <br />
+            </fieldset>
+            <div class="submit">
+                <input type="submit" name="submit" value="제출" />
+                <input type="reset" name="reset" value="초기화" />
             </div>
-            <div id="productList">
-            </div>
-        </div>
-        <div class="upload">
-            <h2>공연 등록</h2>
-            공연명 :<br> <input type="text" name="" id="show"> <br>
-            공연사진 :<br> <input type="file" name="" id="file"> <br>
-            공연일시 :<br> <input type="text" name="" id="date"> <br>
-            공연장소 :<br> <input  type="text" name="" id="place"> <br>
-            <button onclick="fileUpload();"> 상품등록</button>
-            <button onclick="tableprint();"> 상품리스트</button>
-        </div>
-        <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-            <div class="w3-modal-content w3-animate-zoom">
-              <img id="img01" style="width:100%;">
-            </div>
-        </div>
-    </section>
+            
+        </form>
+    </div>
     <footer>
         <h4>(주)MID</h4>
         <p>부산광역시 해운대구 에이로 123번길 2-28 <br>

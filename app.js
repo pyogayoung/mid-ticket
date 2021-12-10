@@ -12,6 +12,7 @@ function login(){
         }
     }else{
         alert("회원가입을 해주세요.")
+        // window.location.href="./register.register.html"
     }
 }
 
@@ -53,10 +54,27 @@ function tableprint(){
 let text ='';
 text = `<table><tr><th>공연명</th><th> </th><th>공연일시</th><th>공연장소</th></tr>`;
 for(let i=0; i<data.length; i++){
-    text += `<tr><td><img src=${data[i][0]} style="width: 130px;"></td><td id="show-name">${data[i][1]}</td><td>${data[i][2]}</td><td>${data[i][3]}</td></tr>`;
+    text += `<tr><td><a><img src=${data[i][0]} style="width: 130px;"></a></td><td id="show-name">${data[i][1]}</td><td>${data[i][2]}</td><td>${data[i][3]}</td></tr>`;
 }
 text+=`</table>`;
     document.getElementById("productList").innerHTML=text;
+}
+
+// sub02 //
+
+let data2 = [["./sub02_images/1.jpg","강남심포니오케스트라 제89회 정기연주회","2022-01-01 ~ 2022-01-01", "예술의 전당 콘서틀홀"],
+            ["./sub02_images/2.jpg","강보라 바이올린 독주회","2021-12-01 ~ 2022-01-01 ", "예술의전당 리사이틀홀"],
+            ["./sub02_images/3.JPG","고전적 음악, 저녁 : HOME Again - 수원","2021-12-31 ~ 2022-01-01", "경기아트센터 소극장"],
+            ["./sub02_images/4.JPG","댄스씨어터 창 〈굿 (Exorcism) _사도〉","2022-01-11 ~ 2022-01-01", "아르코예술극장 대극장"]]
+
+function tableprint2(){
+let text ='';
+text = `<table><tr><th>공연명</th><th> </th><th>공연일시</th><th>공연장소</th></tr>`;
+for(let i=0; i<data.length; i++){
+    text += `<tr><td><a><img src=${data2[i][0]} style="width: 130px;"></a></td><td id="show-name">${data2[i][1]}</td><td>${data2[i][2]}</td><td>${data2[i][3]}</td></tr>`;
+}
+text+=`</table>`;
+    document.getElementById("productList2").innerHTML=text;
 }
 
 function zoomIn(e) {

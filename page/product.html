@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sub01_style.css">
-    <script src="../app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cdfa4ce3aa1f1ca7d2d8ae9d43eee30d"></script>
+    <script src="./app.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
-    <title>미드티켓</title>
+    <title>Document</title>
 </head>
-<body onload="tableprint();">
+<body onload="getLocation();">
     <header>
         <h1><a href="../index.html">mid-Ticket</a></h1>
     </header>
@@ -18,7 +20,7 @@
             <button id="sidebar-button" onclick="w3_open()">☰</button> 
             <button id="sidebar-close-button" onclick="w3_close()">☰</button>            
             <li>
-                <a href="./concert.html">콘서트</a> 
+                <a href="../sub01/concert.html">콘서트</a> 
                 <ul id="concert"> <hr>
                     <li><a href="">아이돌</a></li>
                     <li><a href="">패스티벌</a></li>
@@ -26,7 +28,7 @@
                 </ul>
             </li>
             <li>
-                <a href="../sub02/classic.html">클래식/무용</a> 
+                <a href="./sub02/classic.html">클래식/무용</a> 
                 <ul id="classic"> <hr>
                     <li><a href="">클래식</a></li>
                     <li><a href="">오페라</a></li>
@@ -66,34 +68,31 @@
             </li>
         </ul>
     </nav>
-    <section >
-        <div id="demo">
-            <h2> 콘서트 </h2>
-            <div class="s-nav">
-                <ul>
-                    <li><a href="">전체</a></li>
-                    <li><a href="">아이돌</a></li>
-                    <li><a href="">페스티벌</a></li>
-                    <li><a href="">내한공연</a></li>
-                </ul>
+    <section>
+        <div class="top">
+            <img src="../images/iu.jpeg" alt="">
+            <div>
+                <h1>2022 아이유 투어 콘서트 〈LOVE，POEM〉－ 서울</h1>
+                <p>공연기간 : 2022.01.01 ~ 2022.01.02</p>
+                <p>관람시간 : 150분</p>
+                <p>장르 : 콘서트</p>
+                <p>공연장 : 서울올림픽 잠실 주경기장</p>
+                <p>관람등급 : 미취학아동 입장불가</p>
             </div>
-            <div id="productList">
-            </div>
-        </div>
-        <div class="upload">
-            <h2>공연 등록</h2>
-            공연명 :<br> <input type="text" name="" id="show"> <br>
-            공연사진 :<br> <input type="file" name="" id="file"> <br>
-            공연일시 :<br> <input type="text" name="" id="date"> <br>
-            공연장소 :<br> <input  type="text" name="" id="place"> <br>
-            <button onclick="fileUpload();"> 상품등록</button>
-            <button onclick="tableprint();"> 상품리스트</button>
-        </div>
-        <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-            <div class="w3-modal-content w3-animate-zoom">
-              <img id="img01" style="width:100%;">
+            <div>
+                <div  onclick="heart_click();" class="jjim">
+                    찜하기 
+                    <i class="fa fa-heart"></i>
+                </div>
+                <a href="../seat/seat.html"><button>예매 하러가기</button></a>
             </div>
         </div>
+        <div class="map-box">
+            <h2>공연장소</h2>
+            <div id="map" style="width:800px;height:400px;"></div>
+        </div>
+        
+        <img src="./images/a.jpg" alt="">
     </section>
     <footer>
         <h4>(주)MID</h4>

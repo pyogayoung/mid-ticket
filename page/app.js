@@ -23,7 +23,6 @@ function heart_click(){
 }
 
 const container = document.querySelector('.container');
-const seats = document.querySelectorAll('.seat');
 
 function seatf(e){
     if (e.target.classList.contains('seat')&& !e.target.classList.contains('occupied')
@@ -38,6 +37,7 @@ function seatf(e){
         alert("이미 판매 된 좌석입니다.");
     }
 }
+
 container.addEventListener('click', seatf)
 
 function getLocation() {

@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cdfa4ce3aa1f1ca7d2d8ae9d43eee30d"></script>
-    <script src="./app.js"></script>
+    <link rel="stylesheet" href="./mypage.css">
+    <script src="../app.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>미드티켓</title>
 </head>
-<body onload="getLocation();">
+<body >
     <header>
         <h1><a href="../index.html">mid-Ticket</a></h1>
     </header>
@@ -28,7 +26,7 @@
                 </ul>
             </li>
             <li>
-                <a href="./sub02/classic.html">클래식/무용</a> 
+                <a href="../sub02/classic.html">클래식/무용</a> 
                 <ul id="classic"> <hr>
                     <li><a href="">클래식</a></li>
                     <li><a href="">오페라</a></li>
@@ -60,7 +58,7 @@
                 </ul>
             </li>
             <li>
-                <a href="../mypage/mypage.html">마이페이지</a>
+                <a href="">마이페이지</a>
                 <ul id="my"> <hr>
                     <li><a href="">마이페이지</a></li>
                     <li><a href="">설정</a></li>
@@ -69,30 +67,28 @@
         </ul>
     </nav>
     <section>
-        <div class="top">
-            <img src="../images/iu.jpeg" alt="">
-            <div>
-                <h1>2022 아이유 투어 콘서트 〈LOVE，POEM〉－ 서울</h1>
-                <p>공연기간 : 2022.01.01 ~ 2022.01.02</p>
-                <p>관람시간 : 150분</p>
-                <p>장르 : 콘서트</p>
-                <p>공연장 : 서울올림픽 잠실 주경기장</p>
-                <p>관람등급 : 미취학아동 입장불가</p>
+        <div class="cart">
+            <h1>선호하는 아티스트의 사진을 끌어와 주세요.</h1>
+            <div id="like" ondrop="drop(event)" ondragover="allowDrop(event)">
             </div>
-            <div>
-                <div  onclick="heart_click();" class="jjim">
-                    찜하기 
-                    <i class="fa fa-heart"></i>
-                </div>
-                <a href="../seat/seat.html"><button>예매 하러가기</button></a>
+            <div id="list" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="./images/1.JPG" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+                <img src="./images/10.JPG" draggable="true" ondragstart="drag(event)" id="drag2" width="88" height="31">
+                <img src="./images/3.JPG" draggable="true" ondragstart="drag(event)" id="drag3" width="88" height="31">
+                <img src="./images/4.JPG" draggable="true" ondragstart="drag(event)" id="drag4" width="88" height="31">
+                <img src="./images/5.JPG" draggable="true" ondragstart="drag(event)" id="drag5" width="88" height="31">
+                <img src="./images/6.JPG" draggable="true" ondragstart="drag(event)" id="drag6" width="88" height="31">
+                <img src="./images/7.JPG" draggable="true" ondragstart="drag(event)" id="drag7" width="88" height="31">
+                <img src="./images/8.JPG" draggable="true" ondragstart="drag(event)" id="drag8" width="88" height="31">
+                <img src="./images/9.JPG" draggable="true" ondragstart="drag(event)" id="drag9" width="88" height="31">
+                <img src="./images/2.JPG" draggable="true" ondragstart="drag(event)" id="drag10" width="88" height="31">
+                <img src="./images/11.JPG" draggable="true" ondragstart="drag(event)" id="drag11" width="88" height="31">
+                <img src="./images/12.JPG" draggable="true" ondragstart="drag(event)" id="drag12" width="88" height="31">
+                <img src="./images/13.JPG" draggable="true" ondragstart="drag(event)" id="drag13" width="88" height="31">
+                <img src="./images/14.JPG" draggable="true" ondragstart="drag(event)" id="drag14" width="88" height="31">
+                <img src="./images/15.JPG" draggable="true" ondragstart="drag(event)" id="drag15" width="88" height="31">
             </div>
         </div>
-        <div class="map-box">
-            <h2>공연장소</h2>
-            <div id="map" style="width:800px;height:400px;"></div>
-        </div>
-        
-        <img src="./images/a.jpg" alt="">
     </section>
     <footer>
         <h4>(주)MID</h4>
@@ -105,4 +101,5 @@
         </p>
     </footer>
 </body>
+
 </html>

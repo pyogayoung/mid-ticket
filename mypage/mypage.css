@@ -1,0 +1,126 @@
+body {
+  background-color: rgb(255, 248, 240, 30%);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+H2 {
+  color: rgb(104, 38, 124, 85%);
+}
+
+.navigation-bar {
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: rgb(104, 38, 124, 5%);
+  padding: 20px 120px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#concert,
+#classic,
+#musical,
+#display,
+#kids,
+#my {
+  display: none;
+}
+
+#sidebar-button,
+#sidebar-close-button {
+  position: absolute;
+  top: 142px;
+  left: 120px;
+  font-size: 20px;
+  background-color: rgb(104, 38, 124, 0%);
+  border: 0;
+  color: rgb(104, 38, 124, 65%);
+}
+
+.s-nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+}
+
+.s-nav ul li {
+  padding: 0 10px;
+}
+
+ul li a {
+  color: rgb(104, 38, 124, 65%);
+}
+
+ul li a:hover,
+#sidebar-button:hover {
+  color: rgb(104, 38, 124, 90%);
+}
+
+header h1 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 100;
+  font-size: 55px;
+  letter-spacing: 3px;
+  margin: 20px 0 30px 25px;
+  color: rgb(104, 38, 124);
+}
+
+section {
+  font-family: "Noto Sans KR", sans-serif;
+  max-width: 70vw;
+  margin: 0 auto;
+}
+
+.cart {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart h1 {
+  font-weight: 100;
+  font-size: 19px;
+  margin: 30px 0;
+  color: rgb(70, 70, 70);
+}
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+#list,
+#like {
+  width: 50vw;
+  height: 200px;
+  margin-bottom: 40px;
+  padding: 10px;
+  border: 1.5px solid rgb(104, 38, 124, 20%);
+  text-align: center;
+  overflow: scroll;
+  overflow: auto;
+}
+
+footer {
+  padding: 15px 0 5px 15px;
+  font-size: small;
+  font-weight: 200;
+  background-color: rgb(104, 38, 124, 5%);
+  color: gray;
+}
+
+footer h4 {
+  margin: 0;
+  font-size: medium;
+  font-weight: 200;
+}

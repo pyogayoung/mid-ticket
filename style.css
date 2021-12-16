@@ -23,9 +23,9 @@ header h1 {
 .navigation-bar {
   font-family: "Noto Sans KR", sans-serif;
   background-color: rgb(104, 38, 124, 5%);
-  padding: 20px 120px;
+  padding: 20px 180px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   text-align: center;
 }
@@ -146,6 +146,10 @@ article img {
 .login-button {
   margin: 15px 0;
   text-align: center;
+}
+
+.login-button a {
+  color: white;
 }
 
 .login-button button,

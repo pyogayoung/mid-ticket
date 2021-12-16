@@ -107,3 +107,17 @@ function popup(){
     //window.open("팝업소스파일", "팝업별명","스타일설정")
     window.open("event.html", "event_popup", "width=500, height=500, scrollbars=yes, left=100, top=100");
 }  
+
+function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+  
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
